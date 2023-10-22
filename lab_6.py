@@ -39,7 +39,7 @@ while True:
         opt = input("\nPlease enter an option: ")
 
     if opt == "2":  # decode option added
-        print("Your decoded password is " + decode(x))
+        print("The encoded password is " + x + ", and the original password is " + decode(x))
         print('Menu')
         print('-------------')
         print("\n1. Encode\n2. Decode\n3. Quit ")
