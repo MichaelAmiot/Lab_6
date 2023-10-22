@@ -27,6 +27,10 @@ while True:
         print("\n1. Encode\n2. Decode\n3. Quit ")
         opt = input("\nPlease enter an option: ")
 
+    if opt == "3":
+        print('Goodbye!')
+        quit()
+
 
 
 
