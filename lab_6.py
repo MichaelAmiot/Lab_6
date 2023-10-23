@@ -24,7 +24,7 @@ if __name__ == '__main__':
     while True:
         print('\nMenu')
         print('-------------')
-        print("\n1. Encode\n2. Decode\n3. Quit ")
+        print("\n1. Encode\n2. Decode\n3. Quit \n")
         opt = input("\nPlease enter an option: ")
 
         if opt == "1":
