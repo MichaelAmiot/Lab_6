@@ -17,7 +17,7 @@ def decode(passcode):  # decoder function - Karina Ann
     password_list = list(passcode)
     for index, item in enumerate(password_list):  # iterate through each item in list and subtract 3
         password_list[index] = int(item) - 3
-        final = final + str(password_list[index])
+        final += str(password_list[index])
     return final
 
 
