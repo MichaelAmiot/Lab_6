@@ -13,11 +13,10 @@ def encode(password):
 
 
 def decode(passcode):  # decoder function - Karina Ann
+    final = ''
     password_list = list(passcode)
     for index, item in enumerate(password_list):  # iterate through each item in list and subtract 3
         password_list[index] = int(item) - 3
-    final = ''  # turn password_list back into a string using final
-    for index, item in enumerate(password_list):  # iterate though each item in list and turn into string
         final = final + str(password_list[index])
     return final
 
@@ -29,7 +28,6 @@ while True:
     opt = input("\nPlease enter an option: ")
 
     if opt == "1":
-        # staying under option 1 will keep return value from encode function in local scope for decode function
         password = input('Please Enter your password to encode: ')
         print(f'Your password has been encoded and stored!')
         x = encode(password)
