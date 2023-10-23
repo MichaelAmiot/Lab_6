@@ -1,15 +1,12 @@
 # Encoder/Decoder Lab_6 Michael Amiot
-numbers = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",
-           "0","1", "2", "3", "4", "5", "6", "7", "8", "9"]  # doubled list to remain in range
 def encode(password):
-    encoded_pass = ""
-    shift_amount = 3  # sets shift amount
-    for num in password:
-        if num in numbers:
-            position = numbers.index(num)  # start position in numbers list for first number in password
-            new_position = position + shift_amount  # adjusts each password number by increase of 3
-            encoded_pass += numbers[new_position]  # stores shifted numbers in list
-    return encoded_pass  # returns encoded password
+    encoded = ''
+    password_list = list(password)
+    # iterate through each item in password_list and add 3
+    for index, item in enumerate(password_list):
+        password_list[index] = int(item) + 3
+        encoded += str(password_list[index])
+    return encoded
 
 
 def decode(passcode):  # decoder function - Karina Ann
