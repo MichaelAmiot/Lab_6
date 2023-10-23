@@ -22,29 +22,31 @@ def decode(passcode):  # decoder function - Karina Ann
     return final
 
 
-while True:
-    print('\nMenu')
-    print('-------------')
-    print("\n1. Encode\n2. Decode\n3. Quit ")
-    opt = input("\nPlease enter an option: ")
+if __name__ == '__main__':
 
-    if opt == "1":
-
-        password = input('Please Enter your password to encode: ')
-        print(f'Your password has been encoded and stored!')
-        x = encode(password)
-        print('Menu')
+    while True:
+        print('\nMenu')
         print('-------------')
         print("\n1. Encode\n2. Decode\n3. Quit ")
         opt = input("\nPlease enter an option: ")
 
-    if opt == "2":  # decode option added
-        print("The encoded password is " + x + ", and the original password is " + decode(x))
-        print('Menu')
-        print('-------------')
-        print("\n1. Encode\n2. Decode\n3. Quit ")
-        opt = input("\nPlease enter an option: ")
+        if opt == "1":
 
-    if opt == "3":
-        print('Goodbye!')
-        quit()
+            password = input('Please Enter your password to encode: ')
+            print(f'Your password has been encoded and stored!')
+            x = encode(password)
+            print('Menu')
+            print('-------------')
+            print("\n1. Encode\n2. Decode\n3. Quit ")
+            opt = input("\nPlease enter an option: ")
+
+        if opt == "2":  # decode option added
+            print("The encoded password is " + x + ", and the original password is " + decode(x))
+            print('Menu')
+            print('-------------')
+            print("\n1. Encode\n2. Decode\n3. Quit ")
+            opt = input("\nPlease enter an option: ")
+
+        if opt == "3":
+            print('Goodbye!')
+            quit()
